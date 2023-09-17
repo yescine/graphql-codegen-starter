@@ -1,0 +1,25 @@
+overwrite: true
+
+#-- This for Vscode extension autocompletion
+projects:
+  hasura:
+    schema: 
+      - "${HASURA_ENDPOINT}":
+          headers: 
+            "x-hasura-admin-secret": "${HASURA_ASMIN_PASSWORD}"
+    documents: "**/*.graphql"
+
+#-- This for grapgql-codegen packages
+generates:
+  src/generated/graphql.d.ts:
+    schema: 
+      - '${HASURA_ENDPOINT}':
+          headers: 
+            "x-hasura-admin-secret": "${HASURA_ASMIN_PASSWORD}"
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-graphql-files-modules"
+    ./graphql.schema.json:
+      plugins:
+        - "introspection"

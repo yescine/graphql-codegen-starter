@@ -1,0 +1,27 @@
+{
+  "name": "graphql-codegen-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gql-gen": "gql-gen --verbose -r dotenv/config --config graphql.config.yaml"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "graphql": "^16.8.0"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/typescript": "^4.0.1",
+    "@graphql-codegen/typescript-graphql-files-modules": "^2.2.1",
+    "@graphql-codegen/typescript-operations": "^4.0.1",
+    "@parcel/watcher": "^2.3.0",
+    "graphql-codegen-typescript-client": "0.18.2",
+    "graphql-codegen-typescript-common": "0.18.2",
+    "graphql-codegen-typescript-graphql-files-modules": "0.18.2",
+    "typescript": "^5.2.2"
+  }
+}
